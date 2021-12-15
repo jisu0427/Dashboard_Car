@@ -49,6 +49,7 @@ def run_eda_app():
     # 유저가 컬럼을 선택하면,
     # 해당 컬럼의 min과 max에 해당하는 사람이 누구인지
     # 그 사람의 데이터를 화면에 보여주는 기능 개발.
+    st.subheader('해당 컬럼의 min과 maxx 검색')
     print( df.columns )
     print( df.dtypes != object )
     print( df.columns[ df.dtypes != object ] )
@@ -69,7 +70,7 @@ def run_eda_app():
 
     # 고객의 이름을 검색할 수 있는 기능 개발
     # 1. 유저한테 검색어 입력받기
-    st.subheader('사람')
+    st.subheader('사람 검색')
     word = st.text_input('이름을 검색하세요')
     
     # 1-1 검색을 위해 다 소문자로 바꾸기
