@@ -5,6 +5,7 @@ import os
 import pickle
 
 from eda_app import run_eda_app
+from ml_app import run_ml_app
 
 def main():
     st.title('자동차 가격 예측')
@@ -19,6 +20,9 @@ def main():
         
     elif choice == 'EDA':
         run_eda_app()
+    elif choice == 'ML':
+        run_ml_app()
+
 
 if __name__ == '__main__':
     main()
