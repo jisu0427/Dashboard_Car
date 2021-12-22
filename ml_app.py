@@ -7,7 +7,7 @@ import joblib
 def run_ml_app() :
     st.subheader('Machine Learning 예측')
 
-    df = pd.read_csv('data/Car_Purchasing_Data.csv')
+    df = pd.read_csv('data/Car_Purchasing_Data.csv', encoding='ISO-8859-1')
 
     # 1. 유저한테, 데이터를 입력받습니다.
     gender = st.radio('성별을 입력하세요.', ['남자', '여자'])
@@ -54,3 +54,5 @@ def run_ml_app() :
     if btn :
         st.write('예측 결과! {:.1f} 달러의 차를 살 수 있습니다.'.format(y_pred[0,0]))
         st.write('예측 결과! {} 달러의 차를 살 수 있습니다.'.format( round(y_pred[0,0], 1) ))
+
+
